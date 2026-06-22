@@ -1,109 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>25 Things I Love About You</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<title>Happy 25th Birthday Pooken ❤️</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #ffe6f0, #fff);
-      color: #333;
-      text-align: center;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    header {
-      padding: 60px 20px 30px;
-    }
+<style>
 
-    h1 {
-      font-size: 2.5rem;
-      color: #e85d75;
-      margin-bottom: 10px;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    p.subtitle {
-      font-size: 1.1rem;
-      color: #666;
-    }
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ffe6ee,#fff6fa);
+    min-height:100vh;
+    color:#444;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      padding: 30px;
-      max-width: 1000px;
-      margin: auto;
-    }
+/* PASSWORD SCREEN */
 
-    .card {
-      background: white;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease;
-    }
+#lockScreen{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+#lockScreen h1{
+    color:#e56b88;
+    margin-bottom:15px;
+    font-size:2.5rem;
+}
 
-    .number {
-      font-weight: 700;
-      color: #e85d75;
-      margin-bottom: 8px;
-    }
+#lockScreen p{
+    margin-bottom:20px;
+}
 
-    footer {
-      padding: 40px 20px;
-      font-size: 1.2rem;
-      color: #e85d75;
-    }
-  </style>
+input{
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    width:250px;
+    text-align:center;
+    font-size:1rem;
+}
+
+button{
+    margin-top:15px;
+    padding:12px 24px;
+    border:none;
+    border-radius:12px;
+    background:#e56b88;
+    color:white;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+#error{
+    color:red;
+    margin-top:10px;
+    display:none;
+}
+
+/* MAIN PAGE */
+
+#mainContent{
+    display:none;
+    padding:40px 20px 60px;
+}
+
+.hero{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.hero h1{
+    color:#e56b88;
+    font-size:2.8rem;
+}
+
+.hero p{
+    margin-top:10px;
+    color:#666;
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.flip-card{
+    background:transparent;
+    height:220px;
+    perspective:1000px;
+    cursor:pointer;
+}
+
+.flip-card-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    text-align:center;
+    transition:transform 0.8s;
+    transform-style:preserve-3d;
+}
+
+.flip-card.open .flip-card-inner{
+    transform:rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.flip-card-front{
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:3rem;
+    font-weight:700;
+    color:#e56b88;
+}
+
+.flip-card-back{
+    background:#fff;
+    transform:rotateY(180deg);
+    padding:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:.95rem;
+    line-height:1.5;
+}
+
+.footer{
+    text-align:center;
+    margin-top:50px;
+    color:#e56b88;
+    font-weight:600;
+}
+
+</style>
 </head>
-
 <body>
 
-  <header>
-    <h1>25 Things I Love About You</h1>
-    <p class="subtitle">Happy 25th Birthday ❤️</p>
-  </header>
+<div id="lockScreen">
 
-  <div class="grid">
-    <div class="card"><div class="number">1</div>You make me laugh even on my worst days.</div>
-    <div class="card"><div class="number">2</div>Your smile is my favorite thing in the world.</div>
-    <div class="card"><div class="number">3</div>You’re incredibly patient with me.</div>
-    <div class="card"><div class="number">4</div>You make me feel safe.</div>
-    <div class="card"><div class="number">5</div>You support everything I do.</div>
-    <div class="card"><div class="number">6</div>You’re my best friend.</div>
-    <div class="card"><div class="number">7</div>You always know how to calm me down.</div>
-    <div class="card"><div class="number">8</div>You remember the little things.</div>
-    <div class="card"><div class="number">9</div>You make even boring days fun.</div>
-    <div class="card"><div class="number">10</div>You’re so hardworking.</div>
-    <div class="card"><div class="number">11</div>You believe in me.</div>
-    <div class="card"><div class="number">12</div>You give the best hugs.</div>
-    <div class="card"><div class="number">13</div>You’re honest with me.</div>
-    <div class="card"><div class="number">14</div>You challenge me to be better.</div>
-    <div class="card"><div class="number">15</div>You’re thoughtful in everything you do.</div>
-    <div class="card"><div class="number">16</div>You make me feel loved every day.</div>
-    <div class="card"><div class="number">17</div>You’re ridiculously attractive.</div>
-    <div class="card"><div class="number">18</div>You’re my peace.</div>
-    <div class="card"><div class="number">19</div>You always check on me.</div>
-    <div class="card"><div class="number">20</div>You’re fun to be around no matter what we’re doing.</div>
-    <div class="card"><div class="number">21</div>You respect me.</div>
-    <div class="card"><div class="number">22</div>You make me feel like I’m enough.</div>
-    <div class="card"><div class="number">23</div>You’re my favorite person to talk to.</div>
-    <div class="card"><div class="number">24</div>You make me excited for the future.</div>
-    <div class="card"><div class="number">25</div>I love you for everything you are.</div>
-  </div>
+    <h1>Hi Pooken ❤️</h1>
 
-  <footer>
-    Happy 25th Birthday ❤️
-  </footer>
+    <p>Enter the secret passcode</p>
+
+    <input id="password" type="password" placeholder="Passcode">
+
+    <button onclick="unlock()">Open Surprise</button>
+
+    <div id="error">Wrong passcode ❤️</div>
+
+</div>
+
+<div id="mainContent">
+
+    <div class="hero">
+        <h1>Happy 25th Birthday Pooken! ❤️</h1>
+        <p>Click each card to reveal one thing I love about you.</p>
+    </div>
+
+    <div class="grid">
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">1</div><div class="flip-card-back">I love your creativity (EngiMike).</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">2</div><div class="flip-card-back">I love the way you hug me and tell me to "shake it off" when I'm mad (while literally physically shaking me).</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">3</div><div class="flip-card-back">I love how you always find a way to make me smile.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">4</div><div class="flip-card-back">I love your silliness when no one's looking and the way you make everything fun.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">5</div><div class="flip-card-back">I love your dancing. Hehehe.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">6</div><div class="flip-card-back">I love the way you do "halfsies" with me when we go out to eat.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">7</div><div class="flip-card-back">I love the way we share Nutella and biscotti ice cream from Chill-N.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">8</div><div class="flip-card-back">I love how you support me in every way.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">9</div><div class="flip-card-back">I love the way you reach for my hand like it's Thor's hammer.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">10</div><div class="flip-card-back">I love your kindness towards me every day.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">11</div><div class="flip-card-back">I love your patience with me... most of the time 😂</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">12</div><div class="flip-card-back">I love how hard you work for your goals.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">13</div><div class="flip-card-back">I love the way you take the time to explain things to me when I don't understand something.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">14</div><div class="flip-card-back">I love the way you surprised me for my birthday by driving down from Gainesville... and then surprised me again this year with a birthday dinner.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">15</div><div class="flip-card-back">I love your smile and your laugh.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">16</div><div class="flip-card-back">I love when you call me for fun while you're walking or in the car.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">17</div><div class="flip-card-back">I love the way you encourage me to be better and believe in myself.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">18</div><div class="flip-card-back">I love it when you cuddle me.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">19</div><div class="flip-card-back">I love the way you feed me when I'm hangry like it's an emergency.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">20</div><div class="flip-card-back">I love the way you went down the same blue slope with me ten times in a row just because it was my favorite.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">21</div><div class="flip-card-back">I love how excited you get when you talk about something you're passionate about.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">22</div><div class="flip-card-back">I love that I can always tell when Angelito Malo is plotting something because you make the exact same face every time.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">23</div><div class="flip-card-back">I love that you've gotten me to try things I never thought I'd like—tomatoes, guac, mushrooms... and now I'm making mango salsa.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">24</div><div class="flip-card-back">I love that you are my favorite person to just chill and do absolutely nothing with.</div></div></div>
+
+        <div class="flip-card" onclick="this.classList.toggle('open')"><div class="flip-card-inner"><div class="flip-card-front">25</div><div class="flip-card-back">I love that after everything, you are still my favorite person and my best friend. ❤️</div></div></div>
+
+    </div>
+
+    <div class="footer">
+        Forever your biggest fan ❤️
+    </div>
+
+</div>
+
+<script>
+
+function unlock(){
+
+    const password = document.getElementById('password').value;
+
+    if(password === "PACO"){
+        document.getElementById('lockScreen').style.display='none';
+        document.getElementById('mainContent').style.display='block';
+    }else{
+        document.getElementById('error').style.display='block';
+    }
+
+}
+
+</script>
 
 </body>
 </html>
