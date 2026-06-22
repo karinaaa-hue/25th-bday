@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For Mike ❤️</title>
+  <title>25 Things I Love About You</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -16,41 +16,23 @@
       text-align: center;
     }
 
-    .container {
-      padding: 60px 20px;
+    header {
+      padding: 60px 20px 30px;
     }
 
     h1 {
+      font-size: 2.5rem;
       color: #e85d75;
-      font-size: 2.2rem;
+      margin-bottom: 10px;
     }
 
-    input {
-      padding: 12px;
-      width: 220px;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-      margin-top: 15px;
-      font-size: 1rem;
-    }
-
-    button {
-      margin-top: 15px;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 10px;
-      background: #e85d75;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    button:hover {
-      opacity: 0.9;
+    p.subtitle {
+      font-size: 1.1rem;
+      color: #666;
     }
 
     .grid {
-      display: none;
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
       padding: 30px;
@@ -61,7 +43,7 @@
     .card {
       background: white;
       border-radius: 15px;
-      padding: 18px;
+      padding: 20px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
       transition: transform 0.2s ease;
     }
@@ -71,90 +53,57 @@
     }
 
     .number {
-      color: #e85d75;
       font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .error {
-      color: #d00000;
-      margin-top: 10px;
-      display: none;
+      color: #e85d75;
+      margin-bottom: 8px;
     }
 
     footer {
       padding: 40px 20px;
-      color: #e85d75;
       font-size: 1.2rem;
+      color: #e85d75;
     }
   </style>
 </head>
 
 <body>
 
-<!-- PASSWORD SCREEN -->
-<div class="container" id="lockScreen">
-  <h1>Hi Mike ❤️</h1>
-  <p>Enter the password to open your surprise</p>
+  <header>
+    <h1>25 Things I Love About You</h1>
+    <p class="subtitle">Happy 25th Birthday ❤️</p>
+  </header>
 
-  <input type="password" id="password" placeholder="Password"/>
-  <br/>
-  <button onclick="checkPassword()">Unlock</button>
+  <div class="grid">
+    <div class="card"><div class="number">1</div>You make me laugh even on my worst days.</div>
+    <div class="card"><div class="number">2</div>Your smile is my favorite thing in the world.</div>
+    <div class="card"><div class="number">3</div>You’re incredibly patient with me.</div>
+    <div class="card"><div class="number">4</div>You make me feel safe.</div>
+    <div class="card"><div class="number">5</div>You support everything I do.</div>
+    <div class="card"><div class="number">6</div>You’re my best friend.</div>
+    <div class="card"><div class="number">7</div>You always know how to calm me down.</div>
+    <div class="card"><div class="number">8</div>You remember the little things.</div>
+    <div class="card"><div class="number">9</div>You make even boring days fun.</div>
+    <div class="card"><div class="number">10</div>You’re so hardworking.</div>
+    <div class="card"><div class="number">11</div>You believe in me.</div>
+    <div class="card"><div class="number">12</div>You give the best hugs.</div>
+    <div class="card"><div class="number">13</div>You’re honest with me.</div>
+    <div class="card"><div class="number">14</div>You challenge me to be better.</div>
+    <div class="card"><div class="number">15</div>You’re thoughtful in everything you do.</div>
+    <div class="card"><div class="number">16</div>You make me feel loved every day.</div>
+    <div class="card"><div class="number">17</div>You’re ridiculously attractive.</div>
+    <div class="card"><div class="number">18</div>You’re my peace.</div>
+    <div class="card"><div class="number">19</div>You always check on me.</div>
+    <div class="card"><div class="number">20</div>You’re fun to be around no matter what we’re doing.</div>
+    <div class="card"><div class="number">21</div>You respect me.</div>
+    <div class="card"><div class="number">22</div>You make me feel like I’m enough.</div>
+    <div class="card"><div class="number">23</div>You’re my favorite person to talk to.</div>
+    <div class="card"><div class="number">24</div>You make me excited for the future.</div>
+    <div class="card"><div class="number">25</div>I love you for everything you are.</div>
+  </div>
 
-  <div class="error" id="error">Wrong password. Try again ❤️</div>
-</div>
-
-<!-- LOVE LIST -->
-<div class="grid" id="content">
-
-  <div class="card"><div class="number">1</div>Your silliness and the way you never take life too seriously.</div>
-  <div class="card"><div class="number">2</div>The way you hug me and tell me to shake it off when I’m mad (while literally shaking me).</div>
-  <div class="card"><div class="number">3</div>The way you always find a way to make me smile.</div>
-  <div class="card"><div class="number">4</div>Your creativity (a.k.a. EngiMike energy).</div>
-  <div class="card"><div class="number">5</div>Your dancing… even when you swear you don’t dance.</div>
-  <div class="card"><div class="number">6</div>The way we do “halfsies” every time we eat out 🤩</div>
-  <div class="card"><div class="number">7</div>Sharing Chill-N together and making it our thing.</div>
-  <div class="card"><div class="number">8</div>The way you support me in every single way.</div>
-  <div class="card"><div class="number">9</div>The way you reach for my hand like it’s Thor’s hammer — automatic and certain.</div>
-  <div class="card"><div class="number">10</div>The way you treat me with so much kindness and care.</div>
-  <div class="card"><div class="number">11</div>Your patience with me… (most of the time 😭).</div>
-  <div class="card"><div class="number">12</div>How hard you work for your goals without complaining.</div>
-  <div class="card"><div class="number">13</div>The way you take time to explain things when I don’t understand.</div>
-  <div class="card"><div class="number">14</div>Driving down from Gainesville for my birthday — and surprising me again with dinner.</div>
-  <div class="card"><div class="number">15</div>Your smile that instantly changes my mood.</div>
-  <div class="card"><div class="number">16</div>Your laugh that I could recognize anywhere.</div>
-  <div class="card"><div class="number">17</div>The way you encourage me to always do better without pressure.</div>
-  <div class="card"><div class="number">18</div>When you hug me in my sleep and I don’t even realize it but feel safe.</div>
-  <div class="card"><div class="number">19</div>The way you feed me when I’m hangry like it’s an emergency mission.</div>
-  <div class="card"><div class="number">20</div>Going down the same ski slope 10 times in a row with me (Flying Dutchman energy).</div>
-
-  <!-- 5 NEW ONES -->
-  <div class="card"><div class="number">21</div>The way you make even ordinary days feel like something special.</div>
-  <div class="card"><div class="number">22</div>The way you look at me like I’m your favorite person in the room.</div>
-  <div class="card"><div class="number">23</div>The way you remember little details about me that I forget I even said.</div>
-  <div class="card"><div class="number">24</div>How safe I feel when I’m with you no matter where we are.</div>
-  <div class="card"><div class="number">25</div>Just you — everything you are, everything you do, and everything we are together.</div>
-
-</div>
-
-<footer id="footer" style="display:none;">
-  Happy 25th Birthday, Mike ❤️
-</footer>
-
-<script>
-  function checkPassword() {
-    const pass = document.getElementById("password").value;
-    const error = document.getElementById("error");
-
-    if (pass === "MIKE25") {
-      document.getElementById("lockScreen").style.display = "none";
-      document.getElementById("content").style.display = "grid";
-      document.getElementById("footer").style.display = "block";
-    } else {
-      error.style.display = "block";
-    }
-  }
-</script>
+  <footer>
+    Happy 25th Birthday ❤️
+  </footer>
 
 </body>
 </html>
