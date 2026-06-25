@@ -84,6 +84,7 @@ button:hover{
 
 .hero{
     text-align:center;
+    
     margin-bottom:40px;
 }
 
@@ -108,61 +109,61 @@ button:hover{
 }
 
 .flip-card{
-    background:transparent;
-    height:220px;
-    perspective:1000px;
-    cursor:pointer;
+background:transparent;
+height:220px;
+perspective:1000px;
+cursor:pointer;
 }
 
 .flip-card-inner{
-    position:relative;
-    width:100%;
-    height:100%;
-    text-align:center;
-    transition:transform 0.8s;
-    transform-style:preserve-3d;
+position:relative;
+width:100%;
+height:100%;
+transform-style:preserve-3d;
+transition:transform 0.8s;
 }
 
 .flip-card.open .flip-card-inner{
-    transform:rotateY(180deg);
+transform:rotateY(180deg);
 }
 
+/* FRONT + BACK BASE */
 .flip-card-front,
 .flip-card-back{
 position:absolute;
-width:100%;
-height:100%;
-backface-visibility:hidden;
+inset:0;
 border-radius:18px;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
+backface-visibility:hidden;
+overflow:hidden;
 }
 
+/* FRONT */
 .flip-card-front{
-background-image:url('Pooken2.jpg');
-background-size:cover;
-background-position:center;
+background:url('Pooken2.jpg') center/cover no-repeat;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 position:relative;
 }
 
+/* NUMBER BADGE */
 .flip-card-front span{
 position:absolute;
-top:12px;
-right:12px;
-width:40px;
-height:40px;
+top:10px;
+right:10px;
+width:38px;
+height:38px;
 border-radius:50%;
-background:white;
+background:rgba(255,255,255,0.92);
 color:#e56b88;
 font-weight:700;
 display:flex;
-justify-content:center;
 align-items:center;
-box-shadow:0 4px 10px rgba(0,0,0,.15);
+justify-content:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
 
+/* BACK */
 .flip-card-back{
 background:#fff;
 transform:rotateY(180deg);
@@ -170,7 +171,8 @@ padding:20px;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:.95rem;
+text-align:center;
+font-size:0.95rem;
 line-height:1.5;
 }
 
@@ -272,7 +274,7 @@ function unlock(){
 
     const password = document.getElementById('password').value;
 
-    if(password === "TuHamburguesa"){
+    if(password === "PACO"){
         document.getElementById('lockScreen').style.display='none';
         document.getElementById('mainContent').style.display='block';
     }else{
